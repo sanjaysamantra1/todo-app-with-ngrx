@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let todo of allToDos">
+    <span [ngClass]="todo.isCompleted ? 'strikethrough' : ''">{{
+      todo.text
+    }}</span>
+
+    &nbsp; &nbsp; &nbsp;
+    <button on-click="deleteTodo(todo.id)">DELETE</button>
+    &nbsp;
+    <button on-click="toggleTodo(todo.id)">TOGGLE</button>
+  </li>
+</ul>
+<p *ngIf="allToDos.length === 0">No ToDos</p>
