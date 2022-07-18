@@ -5,9 +5,9 @@
     }}</span>
 
     &nbsp; &nbsp; &nbsp;
-    <button on-click="deleteTodo(todo.id)">DELETE</button>
+    <button on-click="deleteMyTodo(todo.id)">DELETE</button>
     &nbsp;
-    <button on-click="toggleTodo(todo.id)">TOGGLE</button>
+    <button on-click="toggleMyTodo(todo.id)">TOGGLE</button>
   </li>
 </ul>
-<p *ngIf="allToDos.length === 0">No ToDos</p>
+<p *ngIf="allToDos.length === 0">No ToDo to show</p>

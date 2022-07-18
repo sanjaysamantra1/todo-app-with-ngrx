@@ -1,4 +1,6 @@
+// Action Creators
 export function addTodo(text: string) {
+  // returns action object
   return {
     type: 'ADD_TODO',
     payload: { text },

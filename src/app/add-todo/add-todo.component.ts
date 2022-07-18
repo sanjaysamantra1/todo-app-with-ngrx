@@ -11,8 +11,9 @@ export class AddTodoComponent implements OnInit {
   constructor(private store: Store) {}
 
   ngOnInit(): void {}
+
   addNewTodo(text: string) {
-    const actionObj = addTodo(text);
+    const actionObj = addTodo(text); // action creator
     this.store.dispatch(actionObj);
   }
 }

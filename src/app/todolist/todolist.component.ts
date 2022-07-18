@@ -9,7 +9,6 @@ import { deleteTodo, toggleToDo } from '../actions/actions';
 })
 export class TodolistComponent implements OnInit {
   allToDos: any;
-
   constructor(private store: Store) {}
 
   ngOnInit(): void {
@@ -18,12 +17,12 @@ export class TodolistComponent implements OnInit {
       this.allToDos = state.todosReducer;
     });
   }
-  deleteTodo(id: number) {
-    const actionObj = deleteTodo(id);
+  deleteMyTodo(id: number) {
+    const actionObj = deleteTodo(id); // action creator
     this.store.dispatch(actionObj);
   }
-  toggleTodo(id: number) {
-    const actionObj = toggleToDo(id);
+  toggleMyTodo(id: number) {
+    const actionObj = toggleToDo(id); // action creator
     this.store.dispatch(actionObj);
   }
 }
