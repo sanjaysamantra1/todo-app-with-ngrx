@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { addTodo } from '../actions/actions';
-
 @Component({
   selector: 'app-add-todo',
   templateUrl: './add-todo.component.html',
@@ -9,9 +8,7 @@ import { addTodo } from '../actions/actions';
 })
 export class AddTodoComponent implements OnInit {
   constructor(private store: Store) {}
-
   ngOnInit(): void {}
-
   addNewTodo(text: string) {
     const actionObj = addTodo(text); // action creator
     this.store.dispatch(actionObj);
